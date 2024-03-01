@@ -1,0 +1,59 @@
+.uk {
+	&-input,
+	&-textarea {
+		border-radius: 10px;
+		border: none;
+		padding: 0 18px;
+		@include self-placeholder() {
+			color: $light-brass;
+		}
+	}
+
+	&-input {
+		height: 50px;
+	}
+
+	&-textarea {
+		padding-top: 10px;
+		height: 130px;
+	}
+}
+
+[type="submit"] {
+	width: 250px;
+}
+
+.wpcf7 {
+	.wpcf7-form {
+		&.sent {
+			.wpcf7-response-output {
+				border: none;
+			}
+		}
+
+		.wpcf7-not-valid-tip {
+			margin-top: 10px;
+		}
+
+		.wpcf7-response-output {
+			display: flex;
+			justify-content: center;
+			border: none;
+			padding: 6px;
+			margin: 30px 0 0;
+			border-radius: 10px;
+			color: $white;
+			background: $blue;
+		}
+	}
+
+	.submit-wrapper {
+		p {
+			position: relative;
+		}
+	}
+
+	&-form-control-wrap {
+		display: block;
+	}
+}

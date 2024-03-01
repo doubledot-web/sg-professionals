@@ -1,0 +1,100 @@
+{
+    "key": "group_65cf356667e0f",
+    "title": "Page Settings",
+    "fields": [
+        {
+            "key": "field_65d3176febb1a",
+            "label": "Header",
+            "name": "header",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "row",
+            "sub_fields": [
+                {
+                    "key": "field_65d3178cebb1b",
+                    "label": "Header Top Background Color",
+                    "name": "header_bg_color",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "bg-theme-blue": "Blue",
+                        "bg-theme-green": "Green",
+                        "bg-theme-brass": "Brass"
+                    },
+                    "default_value": "bg-theme-blue",
+                    "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_65d344d8cb5ca",
+                    "label": "Header Menu Background Color",
+                    "name": "header_menu_bg_color",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "bg-theme-white": "White",
+                        "bg-light-blue": "Light Blue",
+                        "bg-theme-blue": "Blue",
+                        "bg-theme-green": "Green",
+                        "bg-theme-brass": "Brass",
+                        "bg-light-brass": "Light Brass"
+                    },
+                    "default_value": "bg-light-blue",
+                    "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1708588128
+}

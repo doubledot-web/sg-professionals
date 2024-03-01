@@ -1,0 +1,42 @@
+.btn-base {
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+
+.no-flex-shrink {
+	flex-shrink: 0;
+}
+
+.max-width-780 {
+	max-width: 780px;
+}
+
+.color-inherit {
+	h1, h2, h3 {
+		color: inherit;
+	}
+}
+
+.remove-margin-from-last-el {
+	*:last-child {
+		margin-bottom: 0;
+	}
+}
+
+
+.box {
+	&.rounded {
+		padding: $box-padding;
+		border-radius: $box-border-radius;
+		@media (min-width: $breakpoint-medium) {
+			padding: $box-padding-m;
+		}
+	}
+
+	&.rounded-sm {
+ 		@media (min-width: $breakpoint-medium) {
+			padding: $box-padding-small-m;
+		}
+	}
+}

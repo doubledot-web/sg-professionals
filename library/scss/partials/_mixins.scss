@@ -1,0 +1,366 @@
+@mixin center($horizontal: true, $vertical: true) {
+	position: absolute;
+	@if ($horizontal and $vertical) {
+		top: 50%;
+		left: 50%;
+		-webkit-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+	} @else if ($horizontal) {
+		left: 50%;
+		-webkit-transform: translate(-50%, 0);
+		transform: translate(-50%, 0);
+	} @else if ($vertical) {
+		top: 50%;
+		-webkit-transform: translate(0, -50%);
+		transform: translate(0, -50%);
+	}
+}
+
+@mixin media-breakpoint($breakpoint) {
+	@if $breakpoint==xl {
+		@media only screen and (min-width: 1600px) {
+			@content;
+		}
+	}
+
+	@if $breakpoint==lg {
+		@media only screen and (min-width: 1200px) {
+			@content;
+		}
+	}
+
+	@if $breakpoint==md {
+		@media only screen and (min-width: 960px) {
+			@content;
+		}
+	}
+
+	@if $breakpoint==sm {
+		@media only screen and (min-width: 640px) {
+			@content;
+		}
+	}
+}
+
+$color-list: theme-black $black, theme-white $white,
+	primary-color $primary-color, secondary-color $secondary-color,
+	theme-blue $blue, light-blue $light-blue, theme-green $green,
+	theme-brass $brass, light-brass $light-brass, theme-neutral-100 $neutral-100,
+	theme-neutral-200 $neutral-200, theme-neutral-300 $neutral-300,
+	theme-neutral-400 $neutral-400, theme-neutral-500 $neutral-500,
+	theme-neutral-600 $neutral-600, theme-neutral-700 $neutral-700,
+	theme-neutral-800 $neutral-800, theme-neutral-900 $neutral-900;
+@each $value in $color-list {
+	.text-#{nth($value, 1)} {
+		color: nth($value, 2);
+
+		&-hover {
+			&:hover {
+				color: nth($value, 2);
+			}
+		}
+	}
+
+	.bg-#{nth($value, 1)} {
+		background-color: nth($value, 2);
+	}
+}
+
+$theme-colors: (
+	"bg-theme-blue": $blue,
+	"bg-theme-green": $green,
+	"bg-theme-brass": $brass,
+	"bg-theme-white": $blue,
+	"bg-light-blue": $blue,
+	"bg-light-brass": $blue,
+);
+
+@each $name, $value in $theme-colors {
+	// Button colors
+	.hero {
+		.#{$name} a {
+			color: $white;
+			background-color: $value;
+			border: 1px solid $value;
+
+			&:hover {
+				background-color: transparent;
+				color: $value;
+			}
+		}
+		.uk-light.#{$name} a {
+			background-color: $white;
+			color: $value;
+			border: 1px solid $white;
+
+			&:hover {
+				background-color: $value;
+				color: $white;
+				border-color: $white;
+			}
+		}
+	}
+
+	.#{$name} {
+		.hamburger {
+			stroke: $blue;
+		}
+
+		.uk-button-default {
+			color: $value;
+			background: transparent;
+			border-color: $value;
+
+			&:hover,
+			&:focus,
+			&:active,
+			&.uk-active {
+				border-color: $blue;
+				background-color: $blue;
+				color: $white;
+			}
+		}
+
+		&.uk-light {
+			.hamburger {
+				stroke: $white;
+			}
+			.uk-button-default {
+				color: $white;
+				background: $value;
+				border-color: $white;
+
+				&:hover,
+				&:focus,
+				&:active,
+				&.uk-active {
+					background-color: $white;
+					color: $value;
+				}
+			}
+		}
+	}
+
+	// menu buttons
+	.#{$name} {
+		@if (
+			$name ==
+				"bg-light-blue" or
+				$name ==
+				"bg-light-brass" or
+				$name ==
+				"bg-theme-white"
+		) {
+			.menu-nav {
+				li.current-menu-item,
+				li.current_page_item,
+				li.current_page_ancestor {
+					> a {
+						color: $white;
+						background-color: $blue;
+					}
+				}
+			}
+
+			a.uk-button:hover,
+			a.uk-button:focus {
+				color: $white;
+			}
+		} @else {
+			a.uk-button:hover,
+			a.uk-button:focus {
+				color: $value;
+			}
+		}
+
+		.uk-navbar-dropdown-nav > li > a {
+			color: $value;
+		}
+
+		.header-top-social:hover,
+		.header-top-social:focus {
+			color: $value;
+		}
+
+		&.uk-light {
+			.menu-nav {
+				li.current-menu-item,
+				li.current_page_item,
+				li.current_page_ancestor {
+					a {
+						color: $value;
+						background-color: $white;
+					}
+				}
+				.uk-navbar-dropdown-nav {
+					li.current-menu-item,
+					li.current_page_item,
+					li.current_page_ancestor {
+						a {
+							color: $white;
+							background-color: $value;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@mixin self-placeholder {
+	&::-webkit-input-placeholder {
+		@content;
+	}
+	&:-moz-placeholder {
+		@content;
+	}
+	&::-moz-placeholder {
+		@content;
+	}
+	&:-ms-input-placeholder {
+		@content;
+	}
+}
+
+@mixin placeholder {
+	::-webkit-input-placeholder {
+		@content;
+	}
+	:-moz-placeholder {
+		@content;
+	}
+	::-moz-placeholder {
+		@content;
+	}
+	:-ms-input-placeholder {
+		@content;
+	}
+}
+
+@mixin autoAlpha($opacity: true, $visibility: true) {
+	@if ($opacity and $visibility) {
+		opacity: 0;
+		visibility: hidden;
+	} @else if ($opacity) {
+		opacity: 0;
+		visibility: visible;
+	} @else if ($visibility) {
+		opacity: 1;
+		visibility: hidden;
+	} @else {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+$position-list: (
+	"l": "left",
+	"r": "right",
+	"t": "top",
+	"b": "bottom",
+);
+
+@each $name, $value in $position-list {
+	@for $i from 0 through 40 {
+		$count: calc($i * 10 / 2);
+
+		$iletter: $count;
+		@if $count < 10 {
+			$iletter: "0" + $count;
+		}
+
+		$i: calc($i/2);
+
+		.p#{$name}-#{$iletter} {
+			padding-#{$value}: calc(0.625rem * $i) !important;
+		}
+
+		.m#{$name}-#{$iletter} {
+			margin-#{$value}: calc(0.625rem * $i) !important;
+		}
+	}
+}
+
+@include media-breakpoint(sm) {
+	@each $name, $value in $position-list {
+		@for $i from 0 through 40 {
+			$count: calc($i * 10 / 2);
+
+			$iletter: $count;
+			@if $count < 10 {
+				$iletter: "0" + $count;
+			}
+
+			$i: calc($i/2);
+
+			.p#{$name}-#{$iletter}s {
+				padding-#{$value}: calc(0.625rem * $i) !important;
+			}
+
+			.m#{$name}-#{$iletter}s {
+				margin-#{$value}: calc(0.625rem * $i) !important;
+			}
+		}
+	}
+}
+
+@include media-breakpoint(md) {
+	@each $name, $value in $position-list {
+		@for $i from 0 through 40 {
+			$count: calc($i * 10 / 2);
+
+			$iletter: $count;
+			@if $count < 10 {
+				$iletter: "0" + $count;
+			}
+
+			$i: calc($i/2);
+
+			.p#{$name}-#{$iletter}m {
+				padding-#{$value}: calc(0.625rem * $i) !important;
+			}
+
+			.m#{$name}-#{$iletter}m {
+				margin-#{$value}: calc(0.625rem * $i) !important;
+			}
+		}
+	}
+}
+
+@for $i from 0 through 40 {
+	$count: calc($i * 10 / 2);
+
+	$iletter: $count;
+	@if $count < 10 {
+		$iletter: "0" + $count;
+	}
+
+	$i: calc($i/2);
+	.height-#{$iletter} {
+		min-height: calc(0.625rem * $i) !important;
+		@include media-breakpoint(sm) {
+			min-height: 1.25rem !important;
+		}
+	}
+}
+
+@mixin c-scrollbar-vertical($thumb-color, $track-color) {
+	&::-webkit-scrollbar {
+		width: 8px;
+	}
+
+	&::-webkit-scrollbar {
+		&-thumb {
+			background: $thumb-color;
+		}
+
+		&-track {
+			background: $track-color;
+		}
+
+		&-track,
+		&-thumb {
+			border-radius: 16px;
+		}
+	}
+}
