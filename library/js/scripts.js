@@ -5,7 +5,8 @@ jQuery(document).ready(function ($) {
 	loadMore();
 	setOffsetBoxesActions();
 	accordionCards();
-	navigateToCertainPageSectionBasedOnHash($);
+	navigateToCertainPageSectionBasedOnHash();
+	mobileAccordionActions();
 
 	// Return to top button initialize
 	function toTopButton() {
@@ -150,7 +151,7 @@ jQuery(document).ready(function ($) {
 		}
 	}
 
-	function navigateToCertainPageSectionBasedOnHash($) {
+	function navigateToCertainPageSectionBasedOnHash() {
 		if (location.hash) {
 			scroll({
 				top:
@@ -158,5 +159,20 @@ jQuery(document).ready(function ($) {
 					document.querySelector(".header").offsetHeight,
 			});
 		}
+	}
+
+	function mobileAccordionActions() {
+		$(".mobile-menu-list a").on("click", function (e) {
+			const $this = $(this);
+			const $item = $this.closest("li");
+			if ($(e.target).closest("svg").length || $(e.target).is("svg")) {
+				e.preventDefault();
+				const $next = $this.next();
+				if ($next.length) {
+					$item.toggleClass("open");
+					$next.slideToggle(200);
+				}
+			}
+		});
 	}
 });

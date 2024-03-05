@@ -263,27 +263,50 @@ function ddump( ...$atts ) {
 
 
 
-/**
- * WPML LANGUAGE SWITCHER
- */
-function language_selector_flags() {
-	if ( class_exists( 'SitePress' ) ) {
+/******************************
+ *** WPML LANGUAGE SWITCHER ***
+ ******************************/
+ function language_selector_flags() {
+	if ( class_exists( 'SitePress' ) ) :
 		$languages = icl_get_languages( 'skip_missing=0&orderby=code' );
 
-		if ( ! empty( $languages ) ) {
-			foreach ( $languages as $language ) {
-				if ( ! $language['active'] ) {
-					echo '<a href="' . $language['url'] . '">';
-				}
-
-				echo '<img src="' . $language['country_flag_url'] . '" height="12" alt="' . $language['language_code'] . '" width="18" />';
-
-				if ( ! $language['active'] ) {
-					echo '</a>';
-				}
-			}
-		}
-	}
+		if ( ! empty( $languages ) ) :
+			?>
+			<div class="uk-flex uk-flex-middle">
+				<?php
+				foreach ( $languages as $language ) :
+					if ( $language['active'] ) :
+						$code = 'el' === $language['code'] ? __( 'Gr', 'safergambling' ) : $language['code'];
+						?>
+						<button class="btn-base text-theme-white uk-flex uk-flex-center uk-flex-middle uk-padding-remove uk-text-capitalize" type="button">
+							<?php echo esc_html( $code ); ?>
+							<svg class="uk-margin-small-left" width="18" height="19" aria-hidden="true">
+								<use xlink:href="#global"></use>
+							</svg>
+						</button>
+						<?php
+					endif;
+				endforeach;
+				?>
+				<div uk-dropdown="mode: click; pos: bottom-right">
+					<?php
+					foreach ( $languages as $language ) :
+						if ( ! $language['active'] ) :
+							$code = 'el' === $language['code'] ? __( 'Gr', 'safergambling' ) : $language['code'];
+							$name = 'el' === $language['code'] ? __( 'Greek', 'safergambling' ) : $language['native_name'];
+							?>
+							<a href="<?php echo esc_url( $language['url'] ); ?>" class=" uk-text-capitalize">
+								<?php echo esc_html( $name ); ?> (<span><?php echo esc_html( $code ); ?></span>)
+							</a>
+							<?php
+						endif;
+					endforeach;
+					?>
+				</div>
+			</div>
+		<?php
+		endif;
+	endif;
 } // End WPML language switcher
 
 

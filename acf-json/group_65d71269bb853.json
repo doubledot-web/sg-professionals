@@ -16,6 +16,7 @@
                 "class": "",
                 "id": ""
             },
+            "wpml_cf_preferences": 3,
             "layout": "block",
             "sub_fields": [
                 {
@@ -32,6 +33,7 @@
                         "class": "",
                         "id": ""
                     },
+                    "wpml_cf_preferences": 3,
                     "default_value": "",
                     "tabs": "all",
                     "toolbar": "basic",
@@ -52,6 +54,7 @@
                         "class": "",
                         "id": ""
                     },
+                    "wpml_cf_preferences": 3,
                     "layouts": {
                         "layout_65d712ae99b94": {
                             "key": "layout_65d712ae99b94",
@@ -73,6 +76,7 @@
                                         "class": "",
                                         "id": ""
                                     },
+                                    "wpml_cf_preferences": 3,
                                     "default_value": "",
                                     "maxlength": "",
                                     "placeholder": "",
@@ -93,6 +97,7 @@
                                         "class": "",
                                         "id": ""
                                     },
+                                    "wpml_cf_preferences": 3,
                                     "default_value": "",
                                     "maxlength": "",
                                     "rows": "",
@@ -113,6 +118,7 @@
                                         "class": "",
                                         "id": ""
                                     },
+                                    "wpml_cf_preferences": 3,
                                     "default_value": "",
                                     "tabs": "all",
                                     "toolbar": "basic",
@@ -149,5 +155,6 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1708594017
+    "acfml_field_group_mode": "advanced",
+    "modified": 1709638897
 }

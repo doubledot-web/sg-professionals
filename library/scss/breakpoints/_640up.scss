@@ -1,6 +1,10 @@
 /**************
  *** HEADER ***
  **************/
+.close-menu {
+	margin-right: 1rem;
+}
+
 .mobile-menu {
 	&-header {
 		min-height: 100px;
@@ -12,8 +16,8 @@
 
 		&:hover {
 			svg {
-				transform: rotate(-180deg);
-				transition: transform 0.3s ease-in-out;
+				//transform: rotate(-180deg);
+				//transition: transform 0.3s ease-in-out;
 			}
 		}
 	}

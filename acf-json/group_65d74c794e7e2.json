@@ -16,6 +16,7 @@
                 "class": "",
                 "id": ""
             },
+            "wpml_cf_preferences": 3,
             "default_value": "",
             "tabs": "all",
             "toolbar": "basic",
@@ -36,6 +37,7 @@
                 "class": "",
                 "id": ""
             },
+            "wpml_cf_preferences": 3,
             "default_value": "",
             "placeholder": ""
         }
@@ -86,5 +88,6 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1709285730
+    "acfml_field_group_mode": "advanced",
+    "modified": 1709638970
 }

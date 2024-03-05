@@ -42,7 +42,7 @@ $social = get_field( 'social', 'option' );
 							'container'      => false, // remove nav container
 							'menu'           => __( 'The Mobile Menu', 'safergambling' ), // nav name
 							'menu_class'     => 'nav mobile-nav', // adding custom nav class
-							'items_wrap'     => '<ul class="mobile-menu-list uk-h2 uk-nav-default uk-nav-parent-icon" uk-nav uk-scrollspy="target: > li; cls: uk-animation-slide-bottom-small; delay: 100; repeat: true;">%3$s</ul>',
+							'items_wrap'     => '<ul class="mobile-menu-list uk-h2 uk-nav-default uk-nav-parent-icon" uk-scrollspy="target: > li; cls: uk-animation-slide-bottom-small; delay: 100; repeat: true;">%3$s</ul>',
 							'theme_location' => 'mobile-nav', // where it's located in the theme,
 							'walker'         => new Mobile_Submenu_Wrapper(),
 							'fallback_cb'    => false,
@@ -68,17 +68,22 @@ $social = get_field( 'social', 'option' );
 						?>
 					</div>
 					<div class="mobile-menu-right">
-						<?php if ( ! empty( $social['channels'] ) ) : ?>
-							<div class="header-socials uk-flex uk-flex-middle uk-flex-center">
-								<?php
-								foreach ( $social['channels'] as $social_channel ) {
-									?>
-									<a href="<?php echo esc_url( $social_channel['link'] ); ?>" class="theme-social"><?php echo '<span uk-icon="icon: ' . esc_html( $social_channel['icon'] ) . ';ratio: 1.2;"></span>'; ?></a>
+						<div class="uk-flex uk-flex-middle">
+							<?php if ( ! empty( $social['channels'] ) ) : ?>
+								<div class="header-socials uk-flex uk-flex-middle uk-flex-center">
 									<?php
-								}
-								?>
+									foreach ( $social['channels'] as $social_channel ) {
+										?>
+										<a href="<?php echo esc_url( $social_channel['link'] ); ?>" class="theme-social"><?php echo '<span uk-icon="icon: ' . esc_html( $social_channel['icon'] ) . ';ratio: 1.2;"></span>'; ?></a>
+										<?php
+									}
+									?>
+								</div>
+							<?php endif; ?>
+							<div class="mobile-menu-lang-switcher lang-switcher">
+								<?php echo language_selector_flags(); ?>
 							</div>
-						<?php endif; ?>
+						</div>
 					</div>
 
 				</div>

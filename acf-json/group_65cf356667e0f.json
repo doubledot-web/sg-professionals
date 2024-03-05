@@ -16,6 +16,7 @@
                 "class": "",
                 "id": ""
             },
+            "wpml_cf_preferences": 3,
             "layout": "row",
             "sub_fields": [
                 {
@@ -32,6 +33,7 @@
                         "class": "",
                         "id": ""
                     },
+                    "wpml_cf_preferences": 3,
                     "choices": {
                         "bg-theme-blue": "Blue",
                         "bg-theme-green": "Green",
@@ -59,6 +61,7 @@
                         "class": "",
                         "id": ""
                     },
+                    "wpml_cf_preferences": 3,
                     "choices": {
                         "bg-theme-white": "White",
                         "bg-light-blue": "Light Blue",
@@ -96,5 +99,6 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1708588128
+    "acfml_field_group_mode": "advanced",
+    "modified": 1709639000
 }

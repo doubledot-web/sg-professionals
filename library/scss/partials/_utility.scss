@@ -13,7 +13,9 @@
 }
 
 .color-inherit {
-	h1, h2, h3 {
+	h1,
+	h2,
+	h3 {
 		color: inherit;
 	}
 }
@@ -23,7 +25,6 @@
 		margin-bottom: 0;
 	}
 }
-
 
 .box {
 	&.rounded {
@@ -35,7 +36,7 @@
 	}
 
 	&.rounded-sm {
- 		@media (min-width: $breakpoint-medium) {
+		@media (min-width: $breakpoint-medium) {
 			padding: $box-padding-small-m;
 		}
 	}

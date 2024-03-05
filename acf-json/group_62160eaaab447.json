@@ -16,6 +16,7 @@
                 "class": "",
                 "id": ""
             },
+            "wpml_cf_preferences": 3,
             "layouts": {
                 "layout_65d48880bdb5c": {
                     "key": "layout_65d48880bdb5c",
@@ -37,6 +38,7 @@
                                 "class": "",
                                 "id": ""
                             },
+                            "wpml_cf_preferences": 3,
                             "layout": "row",
                             "sub_fields": [
                                 {
@@ -53,6 +55,7 @@
                                         "class": "",
                                         "id": ""
                                     },
+                                    "wpml_cf_preferences": 3,
                                     "return_format": "array",
                                     "library": "all",
                                     "min_width": "",
@@ -78,6 +81,7 @@
                                         "class": "",
                                         "id": ""
                                     },
+                                    "wpml_cf_preferences": 3,
                                     "default_value": "",
                                     "tabs": "all",
                                     "toolbar": "full",
@@ -98,6 +102,7 @@
                                         "class": "",
                                         "id": ""
                                     },
+                                    "wpml_cf_preferences": 3,
                                     "choices": {
                                         "bg-theme-white": "White",
                                         "bg-light-blue": "Light Blue",
@@ -140,6 +145,7 @@
                                 "class": "",
                                 "id": ""
                             },
+                            "wpml_cf_preferences": 3,
                             "layout": "row",
                             "sub_fields": [
                                 {
@@ -156,6 +162,7 @@
                                         "class": "",
                                         "id": ""
                                     },
+                                    "wpml_cf_preferences": 3,
                                     "layouts": {
                                         "layout_65dc9d8ccdc08": {
                                             "key": "layout_65dc9d8ccdc08",
@@ -177,6 +184,7 @@
                                                         "class": "",
                                                         "id": ""
                                                     },
+                                                    "wpml_cf_preferences": 3,
                                                     "default_value": "",
                                                     "maxlength": "",
                                                     "placeholder": "",
@@ -197,6 +205,7 @@
                                                         "class": "",
                                                         "id": ""
                                                     },
+                                                    "wpml_cf_preferences": 3,
                                                     "layout": "row",
                                                     "sub_fields": [
                                                         {
@@ -213,6 +222,7 @@
                                                                 "class": "",
                                                                 "id": ""
                                                             },
+                                                            "wpml_cf_preferences": 3,
                                                             "default_value": "",
                                                             "tabs": "all",
                                                             "toolbar": "full",
@@ -233,6 +243,7 @@
                                                                 "class": "",
                                                                 "id": ""
                                                             },
+                                                            "wpml_cf_preferences": 3,
                                                             "message": "",
                                                             "default_value": 0,
                                                             "ui_on_text": "",
@@ -261,6 +272,7 @@
                                                                 "class": "",
                                                                 "id": ""
                                                             },
+                                                            "wpml_cf_preferences": 3,
                                                             "return_format": "array"
                                                         },
                                                         {
@@ -285,6 +297,7 @@
                                                                 "class": "",
                                                                 "id": ""
                                                             },
+                                                            "wpml_cf_preferences": 3,
                                                             "default_value": "",
                                                             "tabs": "all",
                                                             "toolbar": "basic",
@@ -307,6 +320,7 @@
                                                         "class": "",
                                                         "id": ""
                                                     },
+                                                    "wpml_cf_preferences": 3,
                                                     "return_format": "id",
                                                     "library": "all",
                                                     "min_width": "",
@@ -341,6 +355,7 @@
                                         "class": "",
                                         "id": ""
                                     },
+                                    "wpml_cf_preferences": 3,
                                     "message": "",
                                     "default_value": 0,
                                     "ui_on_text": "",
@@ -373,6 +388,7 @@
                                 "class": "",
                                 "id": ""
                             },
+                            "wpml_cf_preferences": 3,
                             "layout": "row",
                             "sub_fields": [
                                 {
@@ -952,5 +968,6 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1709304739
+    "acfml_field_group_mode": "advanced",
+    "modified": 1709638712
 }

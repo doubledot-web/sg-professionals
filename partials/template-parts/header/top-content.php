@@ -30,7 +30,7 @@ $social = get_field( 'social', 'option' );
 				<div class="header-top-item header-top-item-right">
 					<button type="button" aria-label="<?php esc_attr_e( 'Open search form', 'safergambling' ); ?>" uk-toggle="target: #search-modal-form; animation: uk-animation-fade" uk-icon="icon: search; ratio: 1.2;"></button>
 				</div>
-				<span class="header-top-divider header-top-item header-top-item-right"></span>
+				<!--<span class="header-top-divider header-top-item header-top-item-right" style="background: red"></span>-->
 				<?php if ( ! empty( $social['channels'] ) ) : ?>
 					<div class="header-top-item-right header-socials uk-flex uk-flex-middle uk-flex-center">
 						<?php
@@ -42,6 +42,9 @@ $social = get_field( 'social', 'option' );
 						?>
 					</div>
 				<?php endif; ?>
+				<div class="header-lang-switcher lang-switcher">
+					<?php echo language_selector_flags(); ?>
+				</div>
 			</div>
 		</div>
 	</div>

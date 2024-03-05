@@ -38,6 +38,7 @@
 	font-size: 1rem;
 	font-weight: 700;
 	padding: 0 16px;
+	//height: 40px;
 	line-height: 40px;
 
 	&-default {
@@ -178,6 +179,61 @@
 /***************************
  *** HEADER / NAVIGATION ***
  ***************************/
+.bg-theme-blue {
+	.lang-switcher {
+		.uk-dropdown {
+			a {
+				color: $blue;
+
+				&:hover {
+					color: $white;
+					background: $blue;
+				}
+			}
+		}
+
+		&:has(a:hover) {
+			.uk-dropdown {
+				background: $blue;
+			}
+		}
+	}
+}
+
+.lang-switcher {
+	svg {
+		fill: $white;
+	}
+
+	.uk-dropdown {
+		border-radius: 30px;
+		box-shadow: none;
+		min-width: fit-content;
+		padding: 0;
+		transition: background 0.3s ease-in-out;
+
+		a {
+			display: block;
+			line-height: 42px;
+			padding: 0 16px;
+			color: $brass;
+			font-size: 1rem;
+			border-radius: inherit;
+			transition: all 0.3s ease-in-out;
+
+			&:hover {
+				color: $white;
+				background: $brass;
+			}
+		}
+	}
+
+	&:has(a:hover) {
+		.uk-dropdown {
+			background: $brass;
+		}
+	}
+}
 
 #logo {
 	line-height: normal;
@@ -247,6 +303,12 @@
 		&-border {
 			border-bottom: 1px solid rgba($white, 0.3);
 		}
+	}
+
+	&-socials {
+		padding-left: 20px;
+		border-left: 1px solid rgba(255, 255, 255, 0.7);
+		margin: 0 64px 0 20px;
 	}
 
 	&-menu {
@@ -337,17 +399,73 @@
 	}
 }
 
-.close-menu {
-	margin-right: 1rem;
-}
-
 .mobile-menu {
 	&-header {
-		height: 50px;
+		//height: 50px;
+		min-height: 100px;
+	}
+
+	&-right {
+		@media (max-width: $breakpoint-small-max) {
+			width: 100%;
+		}
+	}
+
+	&-lang-switcher {
+		button {
+			font-size: 18px;
+			color: $blue;
+			border: 1px solid $blue;
+			width: 82px;
+			line-height: 40px;
+			border-radius: 22.5px;
+			transition: all 0.3s ease-in-out;
+
+			&:hover,
+			&:focus,
+			&:active {
+				color: $white;
+				background: $blue;
+
+				svg {
+					fill: $white;
+				}
+			}
+		}
+
+		svg {
+			fill: $blue;
+			transition: fill 0.3s ease-in-out;
+		}
+
+		.uk-dropdown {
+			background: transparent;
+			border: 1px solid $blue;
+
+			a {
+				color: $blue;
+			}
+		}
+	}
+
+	&-footer {
+		.header-socials {
+			padding: 0;
+			margin: 0 36px 0 0;
+			@media (max-width: $breakpoint-small-max) {
+				margin-right: auto;
+			}
+		}
 	}
 
 	&-list {
 		display: inline-block;
+		padding: 0;
+		margin: 0;
+	}
+
+	ul {
+		list-style: none;
 	}
 
 	ul > li > a {
@@ -357,13 +475,17 @@
 		padding: 6px 0;
 
 		svg {
+			padding: 0 5px;
+			margin-left: 5px;
+			box-sizing: content-box;
 			transition: transform 0.3s ease-in-out;
 		}
 	}
 
-	li.uk-open > a {
+	li.open > a {
 		svg {
 			transform: rotate(-180deg);
+			transition: transform 0.3s ease-in-out;
 		}
 	}
 
@@ -387,7 +509,7 @@
 	&-dialog {
 		overflow: auto;
 		height: 100%;
-		padding-top: 20px;
+		//padding-top: 20px;
 		padding-bottom: 20px;
 
 		.menu-policies-container ul {
@@ -619,6 +741,8 @@
  *** RICH TEXT ***
  *****************/
 .rich-text-block {
+	transform-style: preserve-3d;
+
 	&:not(:last-child) {
 		margin-bottom: 20px;
 	}
