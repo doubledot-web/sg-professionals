@@ -118,21 +118,25 @@ jQuery(document).ready(function ($) {
 	}
 
 	function animateBoxes() {
-		const tl = gsap.timeline({
-			scrollTrigger: {
-				trigger: ".section-alternate-colored-boxes",
-				start: "top bottom-=100px",
-				//markers: "true",
-			},
-		});
-		tl.to(".box", {
-			clipPath: "inset(0% 0% 0% 0%)",
-			duration: 0.85,
-		}).to(".el", {
-			opacity: 1,
-			y: 0,
-			stagger: 0.2,
-			duration: 0.35,
+		$(".box").each(function () {
+			const $this = $(this);
+			const $els = $this.find(".el");
+			const tl = gsap.timeline({
+				scrollTrigger: {
+					trigger: $this,
+					start: "top bottom-=100px",
+					//markers: "true",
+				},
+			});
+			tl.to($this, {
+				clipPath: "inset(0% 0% 0% 0%)",
+				duration: 0.85,
+			}).to($els, {
+				opacity: 1,
+				y: 0,
+				stagger: 0.2,
+				duration: 0.35,
+			});
 		});
 	}
 

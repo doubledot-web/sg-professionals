@@ -25,7 +25,7 @@ $social = get_field( 'social', 'option' );
 						</a>
 					</div>
 					<div class="uk-flex uk-flex-middle uk-flex-between">
-						<a class="close-menu" href="#modal-menu" uk-toggle><span class="mr-10 mb-00 uk-h4 uk-visible@s"><?php echo __( 'Close', 'safergambling' ); ?></span>
+						<a class="close-menu" href="#modal-menu" aria-label="<?php esc_attr_e( 'Close mobile menu', 'safergambling' ); ?>" uk-toggle><span class="mr-10 mb-00 uk-h4 uk-visible@s"><?php echo __( 'Close', 'safergambling' ); ?></span>
 							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M1.40234 1L22.9997 22.5973" stroke="#1459A4" stroke-width="2"/>
 								<path d="M22.5977 1L1.00031 22.5973" stroke="#1459A4" stroke-width="2"/>

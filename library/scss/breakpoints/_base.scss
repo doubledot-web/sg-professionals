@@ -186,15 +186,15 @@
 				color: $blue;
 
 				&:hover {
-					color: $white;
-					background: $blue;
+					//color: $white;
+					//background: $blue;
 				}
 			}
 		}
 
 		&:has(a:hover) {
 			.uk-dropdown {
-				background: $blue;
+				//background: $blue;
 			}
 		}
 	}
@@ -222,15 +222,15 @@
 			transition: all 0.3s ease-in-out;
 
 			&:hover {
-				color: $white;
-				background: $brass;
+				//color: $white;
+				//background: $brass;
 			}
 		}
 	}
 
 	&:has(a:hover) {
 		.uk-dropdown {
-			background: $brass;
+			//background: $brass;
 		}
 	}
 }
@@ -326,8 +326,12 @@
 			border: 1px solid transparent;
 			transition: all 0.3s ease-in-out;
 			@media (max-width: 1400px) {
-				padding: 0 8px;
+				padding: 0 12px;
 			}
+			@media (max-width: $breakpoint-medium-max) {
+				font-size: 15px;
+			}
+
 			svg {
 				transition: transform 0.3s ease-in-out;
 			}
@@ -444,6 +448,11 @@
 
 			a {
 				color: $blue;
+
+				&:hover {
+					color: $white;
+					background: $blue;
+				}
 			}
 		}
 	}
@@ -1280,6 +1289,15 @@ body {
 				display: block;
 				padding: 8px 16px;
 				transition: all 0.2s;
+			}
+
+			li {
+				&:last-child {
+					a {
+						border-bottom-left-radius: 10px;
+						border-bottom-right-radius: 10px;
+					}
+				}
 			}
 		}
 	}

@@ -288,7 +288,7 @@ function ddump( ...$atts ) {
 					endif;
 				endforeach;
 				?>
-				<div uk-dropdown="mode: click; pos: bottom-right">
+				<div uk-dropdown="pos: bottom-right">
 					<?php
 					foreach ( $languages as $language ) :
 						if ( ! $language['active'] ) :

@@ -21,21 +21,17 @@
 						<?php the_field( 'more_text' ); ?>
 					</div>
 
-					<?php if ( get_field( 'external_link' ) ) : ?>
-						<a class="uk-button uk-button-default uk-margin-medium-top" href="<?php echo esc_url( get_field( 'external_link' ) ); ?>" target="_blank">
-							<?php esc_html_e( 'Find out more', 'safergambling' ); ?> →
-						</a>
-					<?php endif; ?>
-				</div>
-				<?php
-			else :
-				if ( get_field( 'external_link' ) ) :
-					?>
 					<a class="uk-button uk-button-default uk-margin-medium-top" href="<?php echo esc_url( get_field( 'external_link' ) ); ?>" target="_blank">
 						<?php esc_html_e( 'Find out more', 'safergambling' ); ?> →
 					</a>
-					<?php
-				endif;
+				</div>
+				<?php
+			else :
+				?>
+				<a class="uk-button uk-button-default uk-margin-medium-top" href="<?php echo esc_url( get_field( 'external_link' ) ); ?>" target="_blank">
+					<?php esc_html_e( 'Find out more', 'safergambling' ); ?> →
+				</a>
+				<?php
 			endif;
 			?>
 		</div>
