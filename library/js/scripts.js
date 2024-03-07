@@ -7,6 +7,7 @@ jQuery(document).ready(function ($) {
 	accordionCards();
 	navigateToCertainPageSectionBasedOnHash();
 	mobileAccordionActions();
+	setFocusOnSearchModalInput();
 
 	// Return to top button initialize
 	function toTopButton() {
@@ -177,6 +178,15 @@ jQuery(document).ready(function ($) {
 					$next.slideToggle(200);
 				}
 			}
+		});
+	}
+
+	function setFocusOnSearchModalInput() {
+		UIkit.util.on("#search-modal-form", "shown", function () {
+			const $input = $("#search-modal-form input");
+			setTimeout(function () {
+				$input.focus();
+			}, 200);
 		});
 	}
 });
