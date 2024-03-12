@@ -31,7 +31,7 @@ $social = get_field( 'social', 'option' );
 								<path d="M22.5977 1L1.00031 22.5973" stroke="#1459A4" stroke-width="2"/>
 							</svg>
 						</a>
-						<a class="uk-button uk-button-default uk-visible@s" href="#"><span><?php echo __( 'For Players', 'safergambling' ); ?></span></a>
+						<a class="uk-button uk-button-default uk-visible@s" href="https://safergambling.wearedoubledot.com/"><span><?php echo __( 'For Players', 'safergambling' ); ?></span></a>
 					</div>
 				</div>
 				<nav class="mobile-menu mb-20" itemscope itemtype="http://schema.org/SiteNavigationElement">
@@ -42,7 +42,7 @@ $social = get_field( 'social', 'option' );
 							'container'      => false, // remove nav container
 							'menu'           => __( 'The Mobile Menu', 'safergambling' ), // nav name
 							'menu_class'     => 'nav mobile-nav', // adding custom nav class
-							'items_wrap'     => '<ul class="mobile-menu-list uk-h2 uk-nav-default uk-nav-parent-icon" uk-scrollspy="target: > li; cls: uk-animation-slide-bottom-small; delay: 100; repeat: true;">%3$s</ul>',
+							'items_wrap'     => '<ul class="mobile-menu-list uk-h2 uk-nav-default uk-nav-parent-icon" uk-nav uk-scrollspy="target: > li; cls: uk-animation-slide-bottom-small; delay: 100; repeat: true;">%3$s</ul>',
 							'theme_location' => 'mobile-nav', // where it's located in the theme,
 							'walker'         => new Mobile_Submenu_Wrapper(),
 							'fallback_cb'    => false,
@@ -89,7 +89,7 @@ $social = get_field( 'social', 'option' );
 				</div>
 				<div class="mobile-menu-bottom-btns pt-30 pb-30 uk-hidden@m">
 					<div class="uk-flex uk-flex-between">
-						<a class="pro-btn uk-button uk-button-default" href="#"><span><?php echo __( 'For Players', 'safergambling' ); ?></span></a>
+						<a class="pro-btn uk-button uk-button-default" href="https://safergambling.wearedoubledot.com/"><span><?php echo __( 'For Players', 'safergambling' ); ?></span></a>
 					</div>
 				</div>
 			</div>

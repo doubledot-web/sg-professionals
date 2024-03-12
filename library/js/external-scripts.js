@@ -8,7 +8,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 // import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 // import { PixiPlugin } from "gsap/PixiPlugin";
 // import { TextPlugin } from "gsap/TextPlugin";
-// import Lenis from "@studio-freight/lenis";
+import Lenis from "@studio-freight/lenis";
 
 gsap.registerPlugin(
 	// 	Flip,
@@ -35,4 +35,4 @@ window.ScrollTrigger = ScrollTrigger;
 // window.MotionPathPlugin = MotionPathPlugin;
 // window.PixiPlugin = PixiPlugin;
 // window.TextPlugin = TextPlugin;
-// window.Lenis = Lenis;
+window.Lenis = Lenis;

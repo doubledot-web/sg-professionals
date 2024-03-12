@@ -12,12 +12,16 @@ get_header(); ?>
 				the_post();
 				?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					<div class="uk-container uk-container-large uk-margin-large-top uk-margin-large-bottom">
-						<div class="max-width-780">
-							<h1 class="font-medium uk-margin-medium-bottom">
-								<?php the_title(); ?>
-							</h1>
-							<?php the_content(); ?>
+					<div class="uk-container uk-container-large">
+						<div class="pt-40 pb-40 pt-70m pb-70m">
+							<div uk-grid>
+								<div class="uk-width-2-3@m">
+									<h1 class="font-medium uk-margin-medium-bottom">
+										<?php the_title(); ?>
+									</h1>
+									<?php the_content(); ?>
+								</div>
+							</div>
 						</div>
 					</div>
 				</article>

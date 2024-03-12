@@ -1,14 +1,24 @@
 jQuery(document).ready(function ($) {
 	const $window = $(window);
+	mobileNav();
 	toTopButton();
 	toggleMoreText();
 	loadMore();
 	setOffsetBoxesActions();
 	accordionCards();
 	navigateToCertainPageSectionBasedOnHash();
-	mobileAccordionActions();
+	// mobileAccordionActions();
+	setFocusOnSearchModalInput();
+	initLenis();
 
-	// Return to top button initialize
+	function mobileNav() {
+		$("body").on("click", ".mobile-menu-list .menu-item a", function () {
+			if ($(this).attr("aria-expanded") === "true") {
+				window.location.href = $(this).attr("href");
+			}
+		});
+	}
+
 	function toTopButton() {
 		$(window).on("scroll", function (e) {
 			if ($(this).scrollTop() > 600) {
@@ -165,18 +175,38 @@ jQuery(document).ready(function ($) {
 		}
 	}
 
-	function mobileAccordionActions() {
-		$(".mobile-menu-list a").on("click", function (e) {
-			const $this = $(this);
-			const $item = $this.closest("li");
-			if ($(e.target).closest("svg").length || $(e.target).is("svg")) {
-				e.preventDefault();
-				const $next = $this.next();
-				if ($next.length) {
-					$item.toggleClass("open");
-					$next.slideToggle(200);
-				}
-			}
+	// function mobileAccordionActions() {
+	// 	$(".mobile-menu-list a").on("click", function (e) {
+	// 		const $this = $(this);
+	// 		const $item = $this.closest("li");
+	// 		if ($(e.target).closest("svg").length || $(e.target).is("svg")) {
+	// 			e.preventDefault();
+	// 			const $next = $this.next();
+	// 			if ($next.length) {
+	// 				$item.toggleClass("open");
+	// 				$next.slideToggle(200);
+	// 			}
+	// 		}
+	// 	});
+	// }
+
+	function setFocusOnSearchModalInput() {
+		UIkit.util.on("#search-modal-form", "shown", function () {
+			const $input = $("#search-modal-form input");
+			setTimeout(function () {
+				$input.focus();
+			}, 200);
 		});
+	}
+
+	function initLenis() {
+		const lenis = new Lenis();
+
+		function raf(time) {
+			lenis.raf(time);
+			requestAnimationFrame(raf);
+		}
+
+		requestAnimationFrame(raf);
 	}
 });

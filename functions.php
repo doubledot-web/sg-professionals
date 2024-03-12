@@ -447,7 +447,7 @@ function filter_posts( $query ) {
 			endif;
 
 			//SORT
-			if ( is_post_type_archive( array( 'event', 'programme', 'research' ) ) ) :
+			if ( is_post_type_archive( array( 'event', 'programme', 'research', 'regulation' ) ) ) :
 				if ( array_key_exists( 'sort', $_GET ) ) :
 					switch ( $_GET['sort'] ) :
 						case 'oldest':

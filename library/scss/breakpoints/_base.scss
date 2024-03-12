@@ -320,28 +320,31 @@
 			gap: 15px;
 		}
 
-		> li > a {
-			border-radius: 22.5px;
-			font-weight: 500;
-			border: 1px solid transparent;
-			transition: all 0.3s ease-in-out;
-			@media (max-width: 1400px) {
-				padding: 0 12px;
-			}
-			@media (max-width: $breakpoint-medium-max) {
-				font-size: 15px;
+		> li {
+			&:hover {
+				a {
+					border-color: $white;
+
+					svg {
+						transform: rotate(-180deg);
+						transition: transform 0.3s ease-in-out;
+					}
+				}
 			}
 
-			svg {
-				transition: transform 0.3s ease-in-out;
-			}
-
-			&:hover,
-			&:focus {
-				border-color: $white;
+			> a {
+				border-radius: 22.5px;
+				font-weight: 500;
+				border: 1px solid transparent;
+				transition: all 0.3s ease-in-out;
+				@media (max-width: 1400px) {
+					padding: 0 12px;
+				}
+				@media (max-width: $breakpoint-medium-max) {
+					font-size: 15px;
+				}
 
 				svg {
-					transform: rotate(-180deg);
 					transition: transform 0.3s ease-in-out;
 				}
 			}
@@ -484,14 +487,14 @@
 		padding: 6px 0;
 
 		svg {
-			padding: 0 5px;
-			margin-left: 5px;
-			box-sizing: content-box;
+			// padding: 0 5px;
+			// margin-left: 5px;
+			// box-sizing: content-box;
 			transition: transform 0.3s ease-in-out;
 		}
 	}
 
-	li.open > a {
+	li.uk-open > a {
 		svg {
 			transform: rotate(-180deg);
 			transition: transform 0.3s ease-in-out;
@@ -625,13 +628,13 @@
 
 	.uk-input {
 		color: $blue;
-		padding-left: 60px;
-		padding-right: 10px;
+		padding-right: 60px;
+		padding-left: 20px;
 		border-radius: 30px;
 		background-color: $white;
 		background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjMiIGhlaWdodD0iMjMiIHZpZXdCb3g9IjAgMCAyMyAyMyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTkuODI3NDYgMTguNTIxOEMxNC41MjM3IDE4LjUyMTggMTguMzMwNyAxNC41OTk0IDE4LjMzMDcgOS43NjA5MkMxOC4zMzA3IDQuOTIyNCAxNC41MjM3IDEgOS44Mjc0NiAxQzUuMTMxMjUgMSAxLjMyNDIyIDQuOTIyNCAxLjMyNDIyIDkuNzYwOTJDMS4zMjQyMiAxNC41OTk0IDUuMTMxMjUgMTguNTIxOCA5LjgyNzQ2IDE4LjUyMThaIiBzdHJva2U9IiNBRjk3NDQiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIi8+CjxwYXRoIGQ9Ik0yMS4zMTcxIDIxLjk1MzhMMTYuMDMxMiAxNi41MDc4IiBzdHJva2U9IiNBRjk3NDQiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIi8+Cjwvc3ZnPgo=");
 		background-size: 23px 23px;
-		background-position: left 20px center;
+		background-position: right 20px center;
 		background-repeat: no-repeat;
 		@include self-placeholder {
 			color: $blue;
@@ -1278,6 +1281,7 @@ body {
 			border-bottom-right-radius: 10px;
 			padding: 0;
 			box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+			z-index: 10;
 
 			.uk-active a,
 			a:hover {

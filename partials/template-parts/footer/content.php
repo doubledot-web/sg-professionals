@@ -39,7 +39,7 @@ $footer = get_field( 'footer' );
 								endif;
 								?>
 								<div class="footer-pro uk-flex uk-flex-right uk-flex-left@s">
-									<a class="uk-button uk-button-default" href="#"><span><?php echo __( 'For Players', 'safergambling' ); ?></span></a>
+									<a class="uk-button uk-button-default" href="https://safergambling.wearedoubledot.com/"><span><?php echo __( 'For Players', 'safergambling' ); ?></span></a>
 								</div>
 							</div>
 						</div>

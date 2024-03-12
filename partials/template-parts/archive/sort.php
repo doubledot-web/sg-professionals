@@ -28,7 +28,7 @@ $sort_array = array(
 					<use xlink:href="#chevron-right"></use>
 				</svg>
 			</button>
-			<div uk-dropdown="mode: click">
+			<div uk-dropdown>
 				<ul class="uk-list">
 					<?php
 					$active_class  = ! isset( $_GET['sort'] ) ? 'uk-active ' : '';

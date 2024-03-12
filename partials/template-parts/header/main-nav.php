@@ -43,7 +43,7 @@ if ( in_array( $header_menu_bg_color, $inverted_colors, true ) ) {
 				</div>
 				<div class="uk-flex uk-flex-middle uk-flex-between">
 					<a href="#modal-menu" aria-label="<?php esc_attr_e( 'Open mobile menu', 'safergambling' ); ?>" uk-toggle><svg class="hamburger" width="30" height="23" viewBox="0 0 30 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 1.42383H30M0 11.4238H30M0 21.4238H30" stroke="currentColor" stroke-width="2"/></svg></a>
-					<a class="uk-button uk-button-default uk-visible@l" href="#"><span><?php echo __( 'For Players', 'safergambling' ); ?></span></a>
+					<a href="https://safergambling.wearedoubledot.com/" class="uk-button uk-button-default uk-visible@l"><span><?php echo __( 'For Players', 'safergambling' ); ?></span></a>
 				</div>
 			</div>
 		</div>
