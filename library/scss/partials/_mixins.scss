@@ -152,9 +152,11 @@ $theme-colors: (
 				"bg-theme-white"
 		) {
 			.menu-nav {
-				li.current-menu-item,
-				li.current_page_item,
-				li.current_page_ancestor {
+				> li.current-menu-item,
+				> li.current_page_item,
+				> li.current_page_ancestor,
+				> li.current-page-ancestor,
+				> li.current-menu-ancestor {
 					> a {
 						color: $white;
 						background-color: $blue;
@@ -190,16 +192,6 @@ $theme-colors: (
 					a {
 						color: $value;
 						background-color: $white;
-					}
-				}
-				.uk-navbar-dropdown-nav {
-					li.current-menu-item,
-					li.current_page_item,
-					li.current_page_ancestor {
-						a {
-							color: $white;
-							background-color: $value;
-						}
 					}
 				}
 			}

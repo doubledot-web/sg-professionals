@@ -42,7 +42,7 @@ $social = get_field( 'social', 'option' );
 							'container'      => false, // remove nav container
 							'menu'           => __( 'The Mobile Menu', 'safergambling' ), // nav name
 							'menu_class'     => 'nav mobile-nav', // adding custom nav class
-							'items_wrap'     => '<ul class="mobile-menu-list uk-h2 uk-nav-default uk-nav-parent-icon" uk-nav uk-scrollspy="target: > li; cls: uk-animation-slide-bottom-small; delay: 100; repeat: true;">%3$s</ul>',
+							'items_wrap'     => '<ul class="mobile-menu-list uk-h2 uk-nav-default uk-nav-parent-icon" uk-scrollspy="target: > li; cls: uk-animation-slide-bottom-small; delay: 100; repeat: true;">%3$s</ul>',
 							'theme_location' => 'mobile-nav', // where it's located in the theme,
 							'walker'         => new Mobile_Submenu_Wrapper(),
 							'fallback_cb'    => false,

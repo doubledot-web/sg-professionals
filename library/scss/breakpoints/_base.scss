@@ -304,9 +304,9 @@
 }
 
 .menu-nav {
-	li.current-menu-item,
-	li.current_page_item,
-	li.current_page_ancestor {
+	> li.current-menu-item,
+	> li.current_page_item,
+	> li.current_page_ancestor {
 		> a {
 			background-color: $blue;
 			color: $white;
@@ -347,8 +347,9 @@
 		li.current-menu-item,
 		li.current_page_item,
 		li.current_page_ancestor {
-			a {
-				border-radius: 20px;
+			a::before {
+				transform-origin: 0% 50%;
+				transform: scale3d(1, 1, 1);
 			}
 		}
 
@@ -459,7 +460,7 @@
 		@include line-animation;
 	}
 
-	li.uk-open > a {
+	li.open > a {
 		svg {
 			transform: rotate(-180deg);
 			transition: transform 0.3s ease-in-out;

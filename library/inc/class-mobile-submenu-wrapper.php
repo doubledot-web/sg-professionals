@@ -1,8 +1,8 @@
 <?php
 class Mobile_Submenu_Wrapper extends Walker_Nav_Menu {
 	function start_lvl( &$output, $depth = 0, $args = array() ) {
-		$indent = str_repeat( "\t", $depth );
-		$output .= "\n$indent<ul class=\"uk-nav-sub uk-nav\">\n";
+		$indent  = str_repeat( "\t", $depth );
+		$output .= "\n$indent<ul class=\"uk-nav-sub\" style='display: none'>\n";
 	}
 
 	/**
@@ -130,9 +130,9 @@ class Mobile_Submenu_Wrapper extends Walker_Nav_Menu {
 
 		$item_output = $args->before;
 		if ( 0 === $depth && in_array( 'menu-item-has-children', $item->classes ) ) :
-			$item_output .= '<a class="uk-flex uk-flex-middle uk-width-1-1" ' . $attributes . '>';
+			$item_output .= '<a class="uk-flex uk-width-1-1" ' . $attributes . '>';
 		else :
-			$item_output .= '<a class="uk-flex uk-flex-middle"' . $attributes . '>';
+			$item_output .= '<a class="uk-flex"' . $attributes . '>';
 		endif;
 		$item_output .= $args->link_before . $title . $args->link_after;
 		if ( 0 === $depth && in_array( 'menu-item-has-children', $item->classes ) ) :
@@ -159,7 +159,7 @@ class Mobile_Submenu_Wrapper extends Walker_Nav_Menu {
 	}
 
 	function end_lvl( &$output, $depth = 0, $args = array() ) {
-		$indent = str_repeat( "\t", $depth );
+		$indent  = str_repeat( "\t", $depth );
 		$output .= "$indent</ul>\n";
 	}
 }
