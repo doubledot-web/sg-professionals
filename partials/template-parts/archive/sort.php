@@ -34,12 +34,12 @@ $sort_array = array(
 					$active_class  = ! isset( $_GET['sort'] ) ? 'uk-active ' : '';
 					$active_class2 = isset( $_GET['sort'] ) && 'oldest' === $_GET['sort'] ? 'uk-active ' : '';
 					?>
-					<li class="<?php echo esc_attr( $active_class ); ?>uk-margin-remove">
+					<li class="<?php echo esc_attr( $active_class ); ?>">
 						<a href="<?php echo esc_url( remove_query_arg( 'sort' ) ); ?>">
 							<?php esc_html_e( 'Newest to Oldest', 'safergambling' ); ?>
 						</a>
 					</li>
-					<li class="<?php echo esc_attr( $active_class2 ); ?>uk-margin-remove">
+					<li class="<?php echo esc_attr( $active_class2 ); ?>">
 						<a href="<?php echo esc_url( add_query_arg( 'sort', 'oldest' ) ); ?>">
 							<?php esc_html_e( 'Oldest to Newest', 'safergambling' ); ?>
 						</a>

@@ -33,7 +33,7 @@
 }
 
 .uk-button {
-	border-radius: 22.5px;
+	border-radius: 30px; //22.5px
 	text-transform: none;
 	font-size: 1rem;
 	font-weight: 700;
@@ -179,59 +179,9 @@
 /***************************
  *** HEADER / NAVIGATION ***
  ***************************/
-.bg-theme-blue {
-	.lang-switcher {
-		.uk-dropdown {
-			a {
-				color: $blue;
-
-				&:hover {
-					//color: $white;
-					//background: $blue;
-				}
-			}
-		}
-
-		&:has(a:hover) {
-			.uk-dropdown {
-				//background: $blue;
-			}
-		}
-	}
-}
-
 .lang-switcher {
 	svg {
 		fill: $white;
-	}
-
-	.uk-dropdown {
-		border-radius: 30px;
-		box-shadow: none;
-		min-width: fit-content;
-		padding: 0;
-		transition: background 0.3s ease-in-out;
-
-		a {
-			display: block;
-			line-height: 42px;
-			padding: 0 16px;
-			color: $brass;
-			font-size: 1rem;
-			border-radius: inherit;
-			transition: all 0.3s ease-in-out;
-
-			&:hover {
-				//color: $white;
-				//background: $brass;
-			}
-		}
-	}
-
-	&:has(a:hover) {
-		.uk-dropdown {
-			//background: $brass;
-		}
 	}
 }
 
@@ -241,7 +191,7 @@
 
 .header {
 	&-top {
-		height: 60px;
+		height: 55px;
 
 		> div {
 			height: 100%;
@@ -257,7 +207,7 @@
 
 			&-right {
 				padding-left: 10px;
-				margin-left: 10px;
+				margin-left: 15px;
 			}
 		}
 
@@ -337,6 +287,7 @@
 				font-weight: 500;
 				border: 1px solid transparent;
 				transition: all 0.3s ease-in-out;
+				column-gap: 7px;
 				@media (max-width: 1400px) {
 					padding: 0 12px;
 				}
@@ -384,7 +335,13 @@
 }
 
 .uk-navbar-dropdown {
+	padding: 15px 20px;
+	width: fit-content;
 	border-radius: 20px;
+
+	li + li {
+		margin-top: 12px;
+	}
 
 	&-nav {
 		li.current-menu-item,
@@ -393,6 +350,13 @@
 			a {
 				border-radius: 20px;
 			}
+		}
+
+		> li > a {
+			display: inline-block !important;
+			font-weight: 500;
+			padding: 0;
+			@include line-animation;
 		}
 	}
 }
@@ -419,7 +383,7 @@
 	}
 
 	&-lang-switcher {
-		button {
+		a {
 			font-size: 18px;
 			color: $blue;
 			border: 1px solid $blue;
@@ -428,9 +392,7 @@
 			border-radius: 22.5px;
 			transition: all 0.3s ease-in-out;
 
-			&:hover,
-			&:focus,
-			&:active {
+			&:hover {
 				color: $white;
 				background: $blue;
 
@@ -444,28 +406,16 @@
 			fill: $blue;
 			transition: fill 0.3s ease-in-out;
 		}
-
-		.uk-dropdown {
-			background: transparent;
-			border: 1px solid $blue;
-
-			a {
-				color: $blue;
-
-				&:hover {
-					color: $white;
-					background: $blue;
-				}
-			}
-		}
 	}
 
 	&-footer {
 		.header-socials {
 			padding: 0;
-			margin: 0 36px 0 0;
+			margin: 0 0 0 36px;
+			order: 1;
 			@media (max-width: $breakpoint-small-max) {
-				margin-right: auto;
+				margin: 0 auto 0 0;
+				order: 0;
 			}
 		}
 	}
@@ -478,6 +428,14 @@
 
 	ul {
 		list-style: none;
+
+		li:not(:last-child) {
+			margin-bottom: 30px;
+		}
+
+		&.uk-nav-sub {
+			padding: 30px 0 0 15px;
+		}
 	}
 
 	ul > li > a {
@@ -485,6 +443,8 @@
 		font-size: 24px;
 		font-weight: 500;
 		padding: 6px 0;
+		column-gap: 10px;
+		line-height: 1;
 
 		svg {
 			// padding: 0 5px;
@@ -492,6 +452,11 @@
 			// box-sizing: content-box;
 			transition: transform 0.3s ease-in-out;
 		}
+	}
+
+	ul > li:not(.uk-parent) > a {
+		display: inline-block;
+		@include line-animation;
 	}
 
 	li.uk-open > a {
@@ -719,14 +684,14 @@
 .img-text {
 	&-row {
 		&:first-child {
-			padding-top: 30px;
+			padding-top: 40px;
 			border-top: 1px solid $brass;
 		}
 
 		&:not(:last-child) {
-			padding-bottom: 30px;
+			padding-bottom: 40px;
 			border-bottom: 1px solid $brass;
-			margin-bottom: 30px;
+			margin-bottom: 40px;
 		}
 
 		a {
@@ -1265,41 +1230,49 @@ body {
 
 			svg {
 				stroke: $blue;
-				transition: stroke 0.3s ease-in-out;
+				transition: all 0.3s ease-in-out;
 			}
 
-			&:hover,
-			&:active,
-			&:focus {
+			&[aria-expanded="true"],
+			&:hover {
+				color: $white;
+				background: $blue;
+
 				svg {
 					stroke: $white;
+					transform: rotate(180deg);
 				}
 			}
 		}
 		.uk-dropdown {
-			border-bottom-left-radius: 10px;
-			border-bottom-right-radius: 10px;
-			padding: 0;
-			box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+			border-radius: 20px;
+			padding: 18px 20px;
+			box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);
 			z-index: 10;
+			min-width: 168px;
 
-			.uk-active a,
-			a:hover {
-				color: $white;
-				background: $blue;
+			.uk-active a {
+				&::before {
+					transform-origin: 0% 50%;
+					transform: scale3d(1, 1, 1);
+				}
 			}
 
 			a {
 				display: block;
-				padding: 8px 16px;
-				transition: all 0.2s;
+				font-weight: 500;
+				@include line-animation;
 			}
 
 			li {
+				& + li {
+					margin-top: 8px;
+				}
+
 				&:last-child {
 					a {
-						border-bottom-left-radius: 10px;
-						border-bottom-right-radius: 10px;
+						border-bottom-left-radius: 20px;
+						border-bottom-right-radius: 20px;
 					}
 				}
 			}
@@ -1535,4 +1508,11 @@ body {
 .credits,
 .copyright {
 	font-size: 0.85em;
+}
+
+.footer-block,
+.credits {
+	a {
+		@include line-animation;
+	}
 }

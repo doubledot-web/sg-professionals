@@ -1,7 +1,6 @@
 jQuery(document).ready(function ($) {
 	const $window = $(window);
 	mobileNav();
-	toTopButton();
 	toggleMoreText();
 	loadMore();
 	setOffsetBoxesActions();
@@ -15,24 +14,6 @@ jQuery(document).ready(function ($) {
 		$("body").on("click", ".mobile-menu-list .menu-item a", function () {
 			if ($(this).attr("aria-expanded") === "true") {
 				window.location.href = $(this).attr("href");
-			}
-		});
-	}
-
-	function toTopButton() {
-		$(window).on("scroll", function (e) {
-			if ($(this).scrollTop() > 600) {
-				$("#to-top")
-					.removeClass(
-						"uk-animation-slide-bottom uk-animation-reverse"
-					)
-					.addClass("uk-animation-slide-bottom-small")
-					.fadeIn();
-			} else {
-				$("#to-top")
-					.removeClass("uk-animation-slide-bottom-small")
-					.addClass("uk-animation-slide-bottom uk-animation-reverse")
-					.fadeOut();
 			}
 		});
 	}

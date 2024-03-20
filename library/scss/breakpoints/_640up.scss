@@ -2,7 +2,7 @@
  *** HEADER ***
  **************/
 .close-menu {
-	margin-right: 1rem;
+	margin-right: 3rem;
 }
 
 .mobile-menu {
@@ -12,7 +12,7 @@
 
 	ul > li > a {
 		font-size: 32px;
-		padding: 10px 0;
+		padding: 2px 0;
 
 		&:hover {
 			svg {
@@ -84,12 +84,12 @@
 .img-text {
 	&-row {
 		&:first-child {
-			padding-top: 50px;
+			padding-top: 90px;
 		}
 
 		&:not(:last-child) {
-			padding-bottom: 50px;
-			margin-bottom: 50px;
+			padding-bottom: 90px;
+			margin-bottom: 90px;
 		}
 	}
 

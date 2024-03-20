@@ -3,10 +3,6 @@
 
 <?php wp_footer(); ?>
 
-<div id="to-top" class="uk-position-fixed uk-position-bottom-right">
-	<a href="" class="uk-padding-small uk-background-muted" uk-totop uk-scroll></a>
-</div>
-
 </body>
 
 </html>

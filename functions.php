@@ -266,7 +266,7 @@ function ddump( ...$atts ) {
 /******************************
  *** WPML LANGUAGE SWITCHER ***
  ******************************/
- function language_selector_flags() {
+function language_selector_flags() {
 	if ( class_exists( 'SitePress' ) ) :
 		$languages = icl_get_languages( 'skip_missing=0&orderby=code' );
 
@@ -275,36 +275,21 @@ function ddump( ...$atts ) {
 			<div class="uk-flex uk-flex-middle">
 				<?php
 				foreach ( $languages as $language ) :
-					if ( $language['active'] ) :
+					if ( ! $language['active'] ) :
 						$code = 'el' === $language['code'] ? __( 'Gr', 'safergambling' ) : $language['code'];
 						?>
-						<button class="btn-base text-theme-white uk-flex uk-flex-center uk-flex-middle uk-padding-remove uk-text-capitalize" type="button">
+						<a href="<?php echo esc_url( $language['url'] ); ?>" class="uk-flex uk-flex-center uk-flex-middle uk-padding-remove uk-text-capitalize">
 							<?php echo esc_html( $code ); ?>
 							<svg class="uk-margin-small-left" width="18" height="19" aria-hidden="true">
 								<use xlink:href="#global"></use>
 							</svg>
-						</button>
+						</a>
 						<?php
 					endif;
 				endforeach;
 				?>
-				<div uk-dropdown="pos: bottom-right">
-					<?php
-					foreach ( $languages as $language ) :
-						if ( ! $language['active'] ) :
-							$code = 'el' === $language['code'] ? __( 'Gr', 'safergambling' ) : $language['code'];
-							$name = 'el' === $language['code'] ? __( 'Greek', 'safergambling' ) : $language['native_name'];
-							?>
-							<a href="<?php echo esc_url( $language['url'] ); ?>" class=" uk-text-capitalize">
-								<?php echo esc_html( $name ); ?> (<span><?php echo esc_html( $code ); ?></span>)
-							</a>
-							<?php
-						endif;
-					endforeach;
-					?>
-				</div>
 			</div>
-		<?php
+			<?php
 		endif;
 	endif;
 } // End WPML language switcher

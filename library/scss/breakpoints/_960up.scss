@@ -31,7 +31,7 @@ h4,
  **************/
 .section-alternate-colored-boxes {
 	.box {
-		padding: 70px;
+		padding: 70px 120px;
 		width: var(--width);
 		--border-radius: 170px;
 
@@ -49,7 +49,7 @@ h4,
 /**************
  *** POSTS GRID ***
  **************/
- .posts-section {
+.posts-section {
 	&:not(.section-with-boxes) {
 		article {
 			.post-grid {
