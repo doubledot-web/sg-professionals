@@ -39,7 +39,7 @@
 	font-weight: 700;
 	padding: 0 16px;
 	//height: 40px;
-	line-height: 40px;
+	line-height: 38px;
 
 	&-default {
 		border-color: $blue;
@@ -192,6 +192,10 @@
 .header {
 	&-top {
 		height: 55px;
+
+		.uk-button-small {
+			line-height: 25px;
+		}
 
 		> div {
 			height: 100%;

@@ -28,7 +28,10 @@ $social = get_field( 'social', 'option' );
 			</div>
 			<div class="top-header-right uk-flex uk-flex-middle">
 				<div class="header-top-item header-top-item-right">
-					<button type="button" aria-label="<?php esc_attr_e( 'Open search form', 'safergambling' ); ?>" uk-toggle="target: #search-modal-form; animation: uk-animation-fade" uk-icon="icon: search; ratio: 1.2;"></button>
+					<button type="button" aria-label="<?php esc_attr_e( 'Open search form', 'safergambling' ); ?>" uk-toggle="target: #search-modal-form; animation: uk-animation-fade" uk-icon=""><svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M7.63449 15.1869C11.2986 15.1869 14.269 12.2166 14.269 8.55246C14.269 4.88833 11.2986 1.91797 7.63449 1.91797C3.97036 1.91797 1 4.88833 1 8.55246C1 12.2166 3.97036 15.1869 7.63449 15.1869Z" stroke="white" stroke-width="2" stroke-miterlimit="10"/>
+					<path d="M16.5988 17.7843L12.4746 13.6602" stroke="white" stroke-width="2" stroke-miterlimit="10"/>
+					</svg></button>
 				</div>
 				<!--<span class="header-top-divider header-top-item header-top-item-right" style="background: red"></span>-->
 				<?php if ( ! empty( $social['channels'] ) ) : ?>
@@ -36,7 +39,7 @@ $social = get_field( 'social', 'option' );
 						<?php
 						foreach ( $social['channels'] as $social_channel ) {
 							?>
-							<a class="header-top-social" href="<?php echo esc_url( $social_channel['link'] ); ?>" class=""><?php echo '<span uk-icon="icon: ' . esc_html( $social_channel['icon'] ) . '; ratio: 0.9;"></span>'; ?></a>
+							<a class="header-top-social" href="<?php echo esc_url( $social_channel['link'] ); ?>" class=""><?php echo '<span uk-icon="icon: ' . esc_html( $social_channel['icon'] ) . '; ratio: 0.7;"></span>'; ?></a>
 							<?php
 						}
 						?>
