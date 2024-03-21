@@ -914,9 +914,11 @@ body {
 		.img-text-boxes {
 			margin-bottom: 0 !important;
 
-			.box:first-child {
-				padding-top: 0;
-				border-top: none;
+			.box {
+				&:first-child {
+					padding-top: 0;
+					border-top: none;
+				}
 			}
 		}
 	}

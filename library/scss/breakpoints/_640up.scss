@@ -152,6 +152,16 @@ body {
 			}
 		}
 	}
+
+	&.home {
+		.img-text-boxes {
+			.box {
+				&:last-child {
+					padding-bottom: 50px;
+				}
+			}
+		}
+	}
 }
 
 .section-alternate-colored-boxes {

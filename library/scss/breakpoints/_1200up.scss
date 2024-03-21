@@ -24,3 +24,18 @@
 		}
 	}
 }
+
+/**************
+ *** SECTIONS ***
+ **************/
+body {
+	&.home {
+		.img-text-boxes {
+			.box {
+				&:last-child {
+					padding-bottom: 20px;
+				}
+			}
+		}
+	}
+}
