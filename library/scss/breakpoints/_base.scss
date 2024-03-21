@@ -246,7 +246,7 @@
 			&:hover,
 			&:focus {
 				background-color: $white;
-				color: $blue !important;
+				//color: $blue !important;
 			}
 		}
 
@@ -371,6 +371,11 @@
 	}
 }
 
+.menu-policies-container a,
+.close-menu span {
+	@include line-animation();
+}
+
 .mobile-menu {
 	&-header {
 		//height: 50px;
@@ -436,6 +441,10 @@
 
 		&.uk-nav-sub {
 			padding: 30px 0 0 15px;
+
+			a {
+				font-weight: 400;
+			}
 		}
 	}
 
@@ -894,7 +903,7 @@ body {
 		&:has(.img-text-boxes ~ section) {
 			.img-text-boxes {
 				.box:last-child {
-					padding-bottom: 30px;
+					padding-bottom: 50px;
 					border-bottom: 1px solid $brass;
 				}
 			}

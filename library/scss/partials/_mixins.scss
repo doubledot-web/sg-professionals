@@ -177,6 +177,14 @@ $theme-colors: (
 
 		.uk-navbar-dropdown-nav > li > a {
 			color: $value;
+
+			&::before {
+				background: $value;
+			}
+
+			&:hover {
+				color: $value;
+			}
 		}
 
 		.header-top-social:hover,
@@ -367,7 +375,7 @@ $position-list: (
 			top: 100%;
 			left: 0;
 			width: 100%;
-			height: 1px;
+			height: 2px;
 			background: $color;
 			pointer-events: none;
 			transform-origin: 100% 50%;

@@ -20,12 +20,12 @@ $padding          = ! empty( $args->colored_background ) ? ' uk-padding-large uk
 			?>
 			<div id="<?php echo $id; ?>" class="box box-<?php echo $id; ?> img-text-row">
 				<div class="img-text-grid uk-child-width-1-2@s uk-flex-middle uk-grid-large" uk-grid>
-					<div class="img-text-img uk-text-center <?php echo 0 === $key % 2 ? ' uk-flex-last@s uk-flex-right@s uk-text-right@s' : 'uk-text-left@s'; ?>">
+					<div class="img-text-img uk-text-center<?php echo 0 === $initial_key % 2 ? ' uk-flex-last@s uk-flex-right@s uk-text-right@s' : ' uk-text-left@s'; ?>">
 						<figure class="uk-margin-remove">
 							<?php echo wp_get_attachment_image( $box->image, 'full' ); ?>
 						</figure>
 					</div>
-					<div class="img-text-content<?php echo 0 !== $key % 2 ? ' uk-flex-right' : ''; ?>">
+					<div class="img-text-content<?php echo 0 !== $initial_key % 2 ? ' uk-flex uk-flex-left uk-flex-right@s' : ''; ?>">
 						<div class="uk-flex uk-flex-column uk-flex-between">
 							<div class="img-text-content-text mb-30 mb-60s remove-margin-from-last-el"><?php echo wp_kses_post( $box_content->text ); ?></div>
 							<div class="img-text-content-link">
@@ -45,7 +45,7 @@ $padding          = ! empty( $args->colored_background ) ? ' uk-padding-large uk
 				</div>
 
 				<?php if ( $show_more ) : ?>
-					<div class="uk-grid-large<?php echo 0 !== $key % 2 ? ' uk-flex-right' : ''; ?> uk-margin-remove-top" uk-grid>
+					<div class="uk-grid-large<?php echo 0 !== $initial_key % 2 ? ' uk-flex-right' : ''; ?> uk-margin-remove-top" uk-grid>
 						<div class="uk-width-1-2@s">
 							<div class="full-text text-<?php echo $id; ?> remove-margin-from-last-el pt-30 pt-60s">
 								<?php echo wp_kses_post( $box_content->full_text ); ?>
