@@ -28,9 +28,9 @@ $social = get_field( 'social', 'option' );
 			</div>
 			<div class="top-header-right uk-flex uk-flex-middle">
 				<div class="header-top-item header-top-item-right">
-					<button type="button" aria-label="<?php esc_attr_e( 'Open search form', 'safergambling' ); ?>" uk-toggle="target: #search-modal-form; animation: uk-animation-fade" uk-icon=""><svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M7.63449 15.1869C11.2986 15.1869 14.269 12.2166 14.269 8.55246C14.269 4.88833 11.2986 1.91797 7.63449 1.91797C3.97036 1.91797 1 4.88833 1 8.55246C1 12.2166 3.97036 15.1869 7.63449 15.1869Z" stroke="white" stroke-width="2" stroke-miterlimit="10"/>
-					<path d="M16.5988 17.7843L12.4746 13.6602" stroke="white" stroke-width="2" stroke-miterlimit="10"/>
+					<button type="button" aria-label="<?php esc_attr_e( 'Open search form', 'safergambling' ); ?>" uk-toggle="target: #search-modal-form; animation: uk-animation-fade" uk-icon=""><svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M9.76092 18.8949C14.5994 18.8949 18.5218 14.9725 18.5218 10.134C18.5218 5.29544 14.5994 1.37305 9.76092 1.37305C4.9224 1.37305 1 5.29544 1 10.134C1 14.9725 4.9224 18.8949 9.76092 18.8949Z" stroke="white" stroke-width="2" stroke-miterlimit="10"/>
+					<path d="M21.6003 22.3278L16.1543 16.8818" stroke="white" stroke-width="2" stroke-miterlimit="10"/>
 					</svg></button>
 				</div>
 				<!--<span class="header-top-divider header-top-item header-top-item-right" style="background: red"></span>-->
