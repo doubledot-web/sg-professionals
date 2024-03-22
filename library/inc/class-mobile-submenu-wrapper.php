@@ -128,12 +128,8 @@ class Mobile_Submenu_Wrapper extends Walker_Nav_Menu {
 		 */
 		$title = apply_filters( 'nav_menu_item_title', $title, $item, $args, $depth );
 
-		$item_output = $args->before;
-		if ( 0 === $depth && in_array( 'menu-item-has-children', $item->classes ) ) :
-			$item_output .= '<a class="uk-flex uk-width-1-1" ' . $attributes . '>';
-		else :
-			$item_output .= '<a class="uk-flex"' . $attributes . '>';
-		endif;
+		$item_output  = $args->before;
+		$item_output .= '<a class="uk-flex"' . $attributes . '>';
 		$item_output .= $args->link_before . $title . $args->link_after;
 		if ( 0 === $depth && in_array( 'menu-item-has-children', $item->classes ) ) :
 			$item_output .= '<svg width="25" height="16" viewBox="0 0 25 16" fill="none"><path d="M23 2L12.4916 13L2 2" stroke="currentColor" stroke-width="3" stroke-miterlimit="10"/></svg>';

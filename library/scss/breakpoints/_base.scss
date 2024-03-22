@@ -371,7 +371,17 @@
 	margin-left: 1rem;
 
 	&:hover {
+		color: currentColor;
 		cursor: pointer;
+	}
+}
+
+.close-menu:has(svg:hover) {
+	span {
+		&::before {
+			transform-origin: 0% 50%;
+			transform: scale3d(1, 1, 1);
+		}
 	}
 }
 
@@ -453,24 +463,20 @@
 	}
 
 	ul > li > a {
+		display: inline-block;
 		color: $blue;
 		font-size: 24px;
 		font-weight: 500;
 		padding: 6px 0;
-		column-gap: 10px;
 		line-height: 1;
+		@include line-animation;
 
 		svg {
 			// padding: 0 5px;
-			// margin-left: 5px;
+			margin-left: 10px;
 			// box-sizing: content-box;
 			transition: transform 0.3s ease-in-out;
 		}
-	}
-
-	ul > li:not(.uk-parent) > a {
-		display: inline-block;
-		@include line-animation;
 	}
 
 	li.open > a {
