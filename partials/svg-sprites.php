@@ -47,4 +47,8 @@
 			</clipPath>
 		</defs>
 	</symbol>
+	<symbol id="search" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path d="M7.38075 14.1326C10.9047 14.1326 13.7615 11.2758 13.7615 7.75184C13.7615 4.22785 10.9047 1.37109 7.38075 1.37109C3.85676 1.37109 1 4.22785 1 7.75184C1 11.2758 3.85676 14.1326 7.38075 14.1326Z" stroke="#1459A4" stroke-width="2" stroke-miterlimit="10"/>
+		<path d="M15.9977 16.6305L12.0312 12.6641" stroke="#1459A4" stroke-width="2" stroke-miterlimit="10"/>
+	</symbol>
 </svg>

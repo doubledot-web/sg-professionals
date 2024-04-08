@@ -125,8 +125,8 @@ jQuery(document).ready(function ($) {
 			}).to($els, {
 				opacity: 1,
 				y: 0,
-				stagger: 0.2,
-				duration: 0.35,
+				stagger: 0.1,
+				duration: 0.25,
 			});
 		});
 	}

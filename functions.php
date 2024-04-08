@@ -402,8 +402,8 @@ add_action( 'init', 'add_excerpt_support_for_pages' );
 function extra_search_form( $form ) {
 	$form  = '<form id="searchformMobile" role="search" method="get" action="' . home_url( '/' ) . '">';
 	$form .= '<div class="search-input-wrapper uk-flex uk-inline">';
-	$form .= '<button class="search-btn inactive" type="submit">';
-	$form .= '<span uk-icon="icon: search; ratio: 1.2"></span>';
+	$form .= '<button class="search-btn inactive" type="submit" aria-label="' . __( 'Search', 'safergambling' ) . '">';
+	$form .= '<svg width="17" height="18" aria-hidden="true"><use xlink:href="#search"></use></svg>';
 	$form .= '</button>';
 	$form .= '<input type="search" id="search-mobile" name="s" value="" placeholder="' . __( 'Search', 'safergambling' ) . '" class="search-input uk-input" />';
 	$form .= '</div>';
