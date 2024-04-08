@@ -58,8 +58,8 @@ endif;
 							<div class="box rounded rounded-sm">
 								<figure class="img-wrapper uk-margin-remove">
 									<?php
-									echo wp_get_attachment_image( $item->image1, 'full', false, array( 'class' => 'img-front' ) );
-									echo wp_get_attachment_image( $item->image2, 'full', false, array( 'class' => 'img-back' ) );
+									echo wp_get_attachment_image( $item->mobile_images->image1, 'full', false, array( 'class' => 'img-front' ) );
+									echo wp_get_attachment_image( $item->mobile_images->image2, 'full', false, array( 'class' => 'img-back' ) );
 									?>
 								</figure>
 								<h2 class="title font-medium uk-margin-medium-top uk-margin-bottom" href>

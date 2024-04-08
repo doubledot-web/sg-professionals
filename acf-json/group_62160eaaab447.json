@@ -405,6 +405,7 @@
                                         "class": "",
                                         "id": ""
                                     },
+                                    "wpml_cf_preferences": 3,
                                     "layout": "table",
                                     "pagination": 0,
                                     "min": 0,
@@ -427,6 +428,7 @@
                                                 "class": "",
                                                 "id": ""
                                             },
+                                            "wpml_cf_preferences": 3,
                                             "default_value": "",
                                             "tabs": "all",
                                             "toolbar": "full",
@@ -448,6 +450,7 @@
                                                 "class": "",
                                                 "id": ""
                                             },
+                                            "wpml_cf_preferences": 3,
                                             "choices": {
                                                 "uk-h5": "Small",
                                                 "uk-h3": "Medium",
@@ -490,6 +493,7 @@
                                 "class": "",
                                 "id": ""
                             },
+                            "wpml_cf_preferences": 3,
                             "layout": "row",
                             "sub_fields": [
                                 {
@@ -506,6 +510,7 @@
                                         "class": "",
                                         "id": ""
                                     },
+                                    "wpml_cf_preferences": 3,
                                     "default_value": "",
                                     "tabs": "all",
                                     "toolbar": "full",
@@ -526,6 +531,7 @@
                                         "class": "",
                                         "id": ""
                                     },
+                                    "wpml_cf_preferences": 3,
                                     "return_format": "array"
                                 },
                                 {
@@ -542,6 +548,7 @@
                                         "class": "",
                                         "id": ""
                                     },
+                                    "wpml_cf_preferences": 3,
                                     "return_format": "id",
                                     "library": "all",
                                     "min_width": "",
@@ -579,6 +586,7 @@
                                 "class": "",
                                 "id": ""
                             },
+                            "wpml_cf_preferences": 3,
                             "layout": "table",
                             "sub_fields": [
                                 {
@@ -595,6 +603,7 @@
                                         "class": "",
                                         "id": ""
                                     },
+                                    "wpml_cf_preferences": 3,
                                     "return_format": "url",
                                     "library": "all",
                                     "min_width": "",
@@ -620,6 +629,7 @@
                                         "class": "",
                                         "id": ""
                                     },
+                                    "wpml_cf_preferences": 3,
                                     "default_value": "",
                                     "maxlength": "",
                                     "rows": "",
@@ -652,6 +662,7 @@
                                 "class": "",
                                 "id": ""
                             },
+                            "wpml_cf_preferences": 3,
                             "layout": "row",
                             "sub_fields": [
                                 {
@@ -668,6 +679,7 @@
                                         "class": "",
                                         "id": ""
                                     },
+                                    "wpml_cf_preferences": 3,
                                     "layouts": {
                                         "layout_65ddec2023215": {
                                             "key": "layout_65ddec2023215",
@@ -689,6 +701,7 @@
                                                         "class": "",
                                                         "id": ""
                                                     },
+                                                    "wpml_cf_preferences": 3,
                                                     "default_value": "",
                                                     "maxlength": "",
                                                     "placeholder": "",
@@ -709,6 +722,7 @@
                                                         "class": "",
                                                         "id": ""
                                                     },
+                                                    "wpml_cf_preferences": 3,
                                                     "default_value": "",
                                                     "maxlength": "",
                                                     "placeholder": "",
@@ -729,6 +743,7 @@
                                                         "class": "",
                                                         "id": ""
                                                     },
+                                                    "wpml_cf_preferences": 3,
                                                     "return_format": "array"
                                                 },
                                                 {
@@ -745,6 +760,7 @@
                                                         "class": "",
                                                         "id": ""
                                                     },
+                                                    "wpml_cf_preferences": 3,
                                                     "return_format": "id",
                                                     "library": "all",
                                                     "min_width": "",
@@ -791,6 +807,7 @@
                                 "class": "",
                                 "id": ""
                             },
+                            "wpml_cf_preferences": 3,
                             "layout": "block",
                             "sub_fields": [
                                 {
@@ -807,6 +824,7 @@
                                         "class": "",
                                         "id": ""
                                     },
+                                    "wpml_cf_preferences": 3,
                                     "layouts": {
                                         "layout_65df50d7f262e": {
                                             "key": "layout_65df50d7f262e",
@@ -828,6 +846,7 @@
                                                         "class": "",
                                                         "id": ""
                                                     },
+                                                    "wpml_cf_preferences": 3,
                                                     "default_value": "",
                                                     "maxlength": "",
                                                     "placeholder": "",
@@ -848,6 +867,7 @@
                                                         "class": "",
                                                         "id": ""
                                                     },
+                                                    "wpml_cf_preferences": 3,
                                                     "default_value": "",
                                                     "maxlength": "",
                                                     "rows": "",
@@ -868,6 +888,7 @@
                                                         "class": "",
                                                         "id": ""
                                                     },
+                                                    "wpml_cf_preferences": 3,
                                                     "return_format": "array"
                                                 },
                                                 {
@@ -884,6 +905,7 @@
                                                         "class": "",
                                                         "id": ""
                                                     },
+                                                    "wpml_cf_preferences": 3,
                                                     "return_format": "id",
                                                     "library": "all",
                                                     "min_width": "",
@@ -909,6 +931,7 @@
                                                         "class": "",
                                                         "id": ""
                                                     },
+                                                    "wpml_cf_preferences": 3,
                                                     "return_format": "id",
                                                     "library": "all",
                                                     "min_width": "",
@@ -919,6 +942,77 @@
                                                     "max_size": "",
                                                     "mime_types": "",
                                                     "preview_size": "medium"
+                                                },
+                                                {
+                                                    "key": "field_6613a46404797",
+                                                    "label": "Mobile (Slider) Images",
+                                                    "name": "mobile_images",
+                                                    "aria-label": "",
+                                                    "type": "group",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": 0,
+                                                    "wrapper": {
+                                                        "width": "",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "wpml_cf_preferences": 3,
+                                                    "layout": "table",
+                                                    "sub_fields": [
+                                                        {
+                                                            "key": "field_6613a3f004795",
+                                                            "label": "Image1",
+                                                            "name": "image1",
+                                                            "aria-label": "",
+                                                            "type": "image",
+                                                            "instructions": "Recommended size: 74 pixels width <br>\r\nUse an image with the same aspect ratio as the other one.",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "wpml_cf_preferences": 3,
+                                                            "return_format": "id",
+                                                            "library": "all",
+                                                            "min_width": "",
+                                                            "min_height": "",
+                                                            "min_size": "",
+                                                            "max_width": "",
+                                                            "max_height": "",
+                                                            "max_size": "",
+                                                            "mime_types": "",
+                                                            "preview_size": "medium"
+                                                        },
+                                                        {
+                                                            "key": "field_6613a40604796",
+                                                            "label": "Image2",
+                                                            "name": "image2",
+                                                            "aria-label": "",
+                                                            "type": "image",
+                                                            "instructions": "Recommended size: 74 pixels width <br>\r\nUse an image with the same aspect ratio as the other one.",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "wpml_cf_preferences": 3,
+                                                            "return_format": "id",
+                                                            "library": "all",
+                                                            "min_width": "",
+                                                            "min_height": "",
+                                                            "min_size": "",
+                                                            "max_width": "",
+                                                            "max_height": "",
+                                                            "max_size": "",
+                                                            "mime_types": "",
+                                                            "preview_size": "medium"
+                                                        }
+                                                    ]
                                                 }
                                             ],
                                             "min": "",
@@ -969,5 +1063,5 @@
     "description": "",
     "show_in_rest": 0,
     "acfml_field_group_mode": "advanced",
-    "modified": 1709638712
+    "modified": 1712563377
 }

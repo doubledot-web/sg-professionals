@@ -547,6 +547,10 @@
 			border: 1px solid $white;
 			border-radius: 0 22.5px 22.5px 0;
 			padding: 0 10px;
+
+			&:focus {
+				border-color: transparent;
+			}
 		}
 		@include placeholder {
 			color: $blue;
@@ -596,6 +600,12 @@
 
 	.search-form-generic {
 		border-top: 1px solid $brass;
+	}
+
+	img {
+		@media (max-width: $breakpoint-xsmall-max) {
+			max-width: 80%;
+		}
 	}
 }
 
